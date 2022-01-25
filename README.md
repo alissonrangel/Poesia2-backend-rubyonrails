@@ -1,24 +1,6 @@
-# README
+## Projeto Pessoal de backend para o site de poesias
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Recursos:
+- devise-token-auth
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[link para o github do projeto de frontend](https://github.com/alissonrangel/Poesia2-frontend-reactjs)
