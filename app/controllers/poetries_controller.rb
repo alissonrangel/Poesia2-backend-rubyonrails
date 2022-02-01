@@ -12,7 +12,22 @@ class PoetriesController < ApplicationController
   # GET /poetries/1
   def show
     @poetry = Poetry.find(params[:id])
-    render json: @poetry
+    @user = Poetry.find(params[:id]).user
+    
+    @retorno = @poetry
+    render json: @retorno
+  end
+
+  def show2
+    @poetry = Poetry.find(params[:id])
+    @user = Poetry.find(params[:id]).user
+    if current_user == @user
+      @retorno = @poetry
+    else
+      @retorno = {error: :true}
+    end  
+    
+    render json: @retorno
   end
 
   # POST /poetries
