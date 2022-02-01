@@ -8,11 +8,11 @@ class UsersController < ApplicationController
     render json: @users
   end
 
-  # # GET /poetries/1
-  # def show
-  #   @poetry = Poetry.find(params[:id])
-  #   render json: @poetry
-  # end
+  # GET /users/1
+  def show
+    @user = User.find(params[:id])
+    render json: @user
+  end
 
   # # POST /poetries
   # def create

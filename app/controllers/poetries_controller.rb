@@ -29,7 +29,7 @@ class PoetriesController < ApplicationController
 
   # PATCH/PUT /poetries/1
   def update
-    if @poetry.update(poetry_params)
+    if @poetry.update(poetry_params2)
       render json: @poetry
     else
       render json: @poetry.errors, status: :unprocessable_entity
@@ -50,6 +50,11 @@ class PoetriesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def poetry_params
       # params.require(:poetry).permit(:title, :body, :likes, :dislikes, :user_id)
-      params.require(:poetry).permit(:title, :body, :likes, :dislikes)
+      params.require(:poetry).permit(:title, :body, :image_url, :image_name, :likes, :dislikes)
+    end
+
+    def poetry_params2
+      # params.require(:poetry).permit(:title, :body, :likes, :dislikes, :user_id)
+      params.require(:poetry).permit(:title, :body, :image_url, :image_name)
     end
 end
