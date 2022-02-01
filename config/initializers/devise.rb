@@ -25,8 +25,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = if Rails.env.production? 
-                           # Rails.application.credentials.gmail[:user_name].to_s
-                           "devise@example.com"
+                           Rails.application.credentials.gmail[:user_name].to_s                           
                          else
                            "devise@example.com"
                          end
