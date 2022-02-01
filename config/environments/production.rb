@@ -113,7 +113,7 @@ Rails.application.configure do
 
   # Email
   config.action_mailer.default_url_options = {
-    host: 'poetry-api.herokuapp.com'
+    host: 'agua-de-coco-e-poesia.herokuapp.com'
   }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
